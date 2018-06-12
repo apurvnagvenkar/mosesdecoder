@@ -1,8 +1,24 @@
 Mosesdecoder for GEC adaptation
 
+Step 0: Preprocessing Alignement and Parllel Data:
+
+Processes the alignment and parallel data and generates the tokenized parallel data with proper alignment
 
 
 
+```shell
+export MOSESDECODER=
+export ALIGNMENT_PATH=
+export INCORRECT_FILE=
+export CORRECT_FILE=
+
+export OUT_ALIGNMENT_PATH=
+export OUT_INCORRECT_FILE=
+export OUT_CORRECT_FILE=
+
+
+python $MOSESDECODER/scripts/training/gec/process_parllel_data_and_align.py -align_file $ALIGNMENT_PATH -inc $INCORRECT_FILE -cor $CORRECT_FILE -out_align_file $OUT_ALIGNMENT_PATH -out_inc $OUT_INCORRECT_FILE -out_cor $OUT_CORRECT_FILE
+```
 
 Step 1: Lexical Translation:
 
