@@ -89,3 +89,21 @@ export SOURCE=inc
 perl $MOSESDECODER/scripts/training/gec/phrase_score.perl -corpus $CORPUS_PATH -e $TARGET -f $SOURCE -alignment_file $ALIGN_FILE -model_dir $MODEL_PATH -extract_file $EXTRACT_PATH -lex_file $LEX_PATH
 ```
 
+
+
+
+
+Step 4: Phrase Table Processing
+
+
+
+```shell
+export MOSESDECODER=
+export input_pt=
+export output_pt=
+```
+
+```shell
+python  $MOSESDECODER/scripts/training/gec/prune_phrase_table.py -inp_pt $input_pt -out_pt $output_pt
+```
+
